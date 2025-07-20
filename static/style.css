@@ -44,7 +44,7 @@ div.stTextArea > label, div.stSelectbox > label {
 
 /* Header Styling */
 h1, h2, h3, h4, h5, h6 {
-    color: #FFD700; /* Gold color */
+    color: #000000; /* Gold color */
     text-align: center;
 }
 

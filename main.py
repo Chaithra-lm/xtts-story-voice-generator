@@ -29,16 +29,16 @@ PREDEFINED_FILES = dict(zip(available_stories, available_stories_path))
 
 # Define 10 audio styles
 AUDIO_STYLES = {
-    "Bedtime Stories (Style 1)": "bs1",
-    "Science Fiction (Style 1)": "sf1",
-    "Humor & Comedy (Style 1)": "hc1",
-    "Life Lessons (Style 1)": "ll1",
-    "Motivational (Style 1)": "m1",
-    "Bedtime Stories (Style 2)": "bs2",
-    "Science Fiction (Style 2)": "sf2",
-    "Humor & Comedy (Style 2)": "hc2",
-    "Life Lessons (Style 2)": "ll2",
-    "Motivational (Style 2)": "m2"
+    "Bedtime Stories (Style 1)": "Scary Style bedtime_converted",
+    "Science Fiction (Style 1)": "Sci-fic_Spiderman_style_1_converted",
+    "Humor & Comedy (Style 1)": "male_style_1_comedy_converted",
+    "Life Lessons (Style 1)": "moral_style_1_converted",
+    "Motivational (Style 1)": "steve_harvey_style_1_motivation_converted",
+    "Bedtime Stories (Style 2)": "soft_style_bedtime_converted",
+    "Science Fiction (Style 2)": "Sci-fic_style_2_bold_converted",
+    "Humor & Comedy (Style 2)": "female_style_2_comedy_converted",
+    "Life Lessons (Style 2)": "moral_style_2_converted",
+    "Motivational (Style 2)": "elon_musk_style_2_motivation_converted"
 }
 
 # Section 1: Choose Input Method
@@ -66,7 +66,7 @@ cols = st.columns(5)  # Split into 5 columns
 style_keys = list(AUDIO_STYLES.keys())
 
 audio_styles_path = glob.glob(f"{AUDIO_STYLE_DIR}/*")
-assert len(audio_styles_path) != AUDIO_STYLES
+# assert len(audio_styles_path) != AUDIO_STYLES
 # MODIFY HERE
 # audio_styles_path
 style_dict ={key: f"{AUDIO_STYLE_DIR}/{AUDIO_STYLES[key]}.wav" for key in style_keys}
@@ -92,8 +92,8 @@ if st.session_state.selected_style:
 
 import os
 import torch
-from TTS.tts.configs.xtts_config import XttsConfig
-from TTS.tts.models.xtts import Xtts
+from TTS.configs.xtts_config import XttsConfig
+from TTS.models.xtts import Xtts
 import soundfile as sf
 import sys
 from pydub import AudioSegment
@@ -110,7 +110,7 @@ ntlk_download()
 ## TTS Model Initialization (Load Once)
 @st.cache_resource
 def load_tts_model():
-    repo_path = "XTTS-v2"
+    repo_path = "/home/smallp/Lilly/Voice-Synthesis/genai/XTTS-v2"
     config_path = os.path.join(repo_path, "config.json")
     speaker_file_path = os.path.join(repo_path, "speakers_xtts.pth")
     checkpoint_dir = repo_path
