@@ -35,7 +35,6 @@ Voice-Synthesis/
 
 
 
-```markdown
 
 ## 🛠️ Setup
 
