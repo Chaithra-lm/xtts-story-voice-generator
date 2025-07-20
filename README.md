@@ -1,6 +1,4 @@
-Here’s your **polished and professional `README.md`** in proper Markdown format with improved structure, consistent formatting, and corrected syntax (including proper code blocks, indentation, and section headers):
 
----
 
 
 # 🎙️ XTTS Story Voice Generator
