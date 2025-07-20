@@ -2,7 +2,7 @@ Here’s your **polished and professional `README.md`** in proper Markdown forma
 
 ---
 
-```markdown
+
 # 🎙️ XTTS Story Voice Generator
 
 A personalized AI-powered storytelling voice synthesizer built using [XTTS-v2](https://github.com/coqui-ai/TTS). This project enables the generation of high-quality speech in multiple voice styles (e.g., Sci-Fi, Bedtime, Motivational) from plain text input, supporting multilingual and emotional storytelling.
@@ -33,9 +33,9 @@ Voice-Synthesis/
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 
-````
 
----
+
+```markdown
 
 ## 🛠️ Setup
 
@@ -109,9 +109,4 @@ Chang Gung University, Taoyuan City, Taiwan
 📬 [LinkedIn Profile](https://www.linkedin.com/in/chaithra-lokasara-mahadevaswamy-5bb076214/)
 🌐 *Building Tomorrow with Intelligence Today*
 
----
 
-```
-
-Let me know if you'd like a badge section, GitHub banner, or demo link added too!
-```
